@@ -1,0 +1,7 @@
+- [ ] HTTP server
+- [ ] toml configuration
+- [ ] env variables configuration
+- [ ] Dockerfile + docker-compose.yml
+- [ ] PostgreSQL connection
+- [ ] OpenID authentication
+- [ ] User registration
