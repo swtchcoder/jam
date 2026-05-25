@@ -1,6 +1,6 @@
 - [x] HTTP server
-- [ ] toml configuration
-- [ ] env variables configuration
+- [x] ~~toml~~ ini configuration
+- [x] env variables configuration
 - [ ] Dockerfile + docker-compose.yml
 - [ ] PostgreSQL connection
 - [ ] OpenID authentication
