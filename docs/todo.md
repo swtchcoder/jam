@@ -1,4 +1,4 @@
-- [ ] HTTP server
+- [x] HTTP server
 - [ ] toml configuration
 - [ ] env variables configuration
 - [ ] Dockerfile + docker-compose.yml
