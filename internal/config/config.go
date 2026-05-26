@@ -1,8 +1,9 @@
 package config
 
 import (
-	"gopkg.in/ini.v1"
 	"os"
+
+	"gopkg.in/ini.v1"
 )
 
 type Config struct {
@@ -18,9 +19,9 @@ func Load(path string) (*Config, error) {
 		return nil, err
 	}
 
-	section := file.Section("")
-	cfg.Host = getKey(section, "host", "0.0.0.0")
-	cfg.Port = getKey(section, "port", "8080")
+	section := file.Section("http")
+	cfg.Host = getKey(section, "host", "JAM_HTTP_HOST", "0.0.0.0")
+	cfg.Port = getKey(section, "port", "JAM_HTTP_PORT", "8080")
 
 	if err := file.SaveTo(path); err != nil {
 		return nil, err
@@ -29,8 +30,8 @@ func Load(path string) (*Config, error) {
 	return cfg, nil
 }
 
-func getKey(section *ini.Section, name string, fallback string) string {
-	if env := os.Getenv(name); env != "" {
+func getKey(section *ini.Section, name string, env_name string, fallback string) string {
+	if env := os.Getenv(env_name); env != "" {
 		return env
 	}
 

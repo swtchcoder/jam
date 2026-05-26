@@ -3,6 +3,7 @@ services:
                 build: .
                 container_name: jam
                 environment:
-                        port: 80
+                        JAM_HTTP_HOST: 0.0.0.0
+                        JAM_HTTP_PORT: 80
                 ports:
                         - 8080:80

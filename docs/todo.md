@@ -2,7 +2,7 @@
 - [x] ~~toml~~ ini configuration
 - [x] env variables configuration
 - [x] Dockerfile + docker-compose.yml
-- [ ] enhance env configuration
+- [x] enhance env configuration
 - [ ] PostgreSQL connection
 - [ ] OpenID authentication
 - [ ] User registration
