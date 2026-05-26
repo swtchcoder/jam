@@ -1,4 +1,4 @@
-FROM golang:1.26-alpine as BUILDER
+FROM golang:1.26-alpine AS builder
 
 WORKDIR /jam
 
@@ -12,7 +12,7 @@ RUN go build -trimpath -ldflags="-s -w" -o jam ./cmd/jam
 
 FROM scratch
 
-COPY --from=BUILDER /jam/jam /jam/jam
+COPY --from=builder /jam/jam /jam/jam
 
 WORKDIR /jam
 

@@ -3,6 +3,6 @@
 - [x] env variables configuration
 - [x] Dockerfile + docker-compose.yml
 - [x] enhance env configuration
-- [ ] PostgreSQL connection
+- [x] PostgreSQL connection
 - [ ] OpenID authentication
 - [ ] User registration

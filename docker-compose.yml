@@ -1,9 +1,19 @@
 services:
+        postgres:
+                image: postgres:latest
+                environment:
+                        POSTGRES_DB: jam
+                        POSTGRES_USER: jam
+                        POSTGRES_PASSWORD: password
         jam:
                 build: .
                 container_name: jam
                 environment:
                         JAM_HTTP_HOST: 0.0.0.0
                         JAM_HTTP_PORT: 80
+                        JAM_POSTGRES_HOST: postgres
+                        JAM_POSTGRES_DB: jam
+                        JAM_POSTGRES_USER: jam
+                        JAM_POSTGRES_PASSWORD: password
                 ports:
                         - 8080:80
