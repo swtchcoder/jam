@@ -1,0 +1,8 @@
+services:
+        jam:
+                build: .
+                container_name: jam
+                environment:
+                        port: 80
+                ports:
+                        - 8080:80

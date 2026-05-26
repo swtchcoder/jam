@@ -1,7 +1,8 @@
 - [x] HTTP server
 - [x] ~~toml~~ ini configuration
 - [x] env variables configuration
-- [ ] Dockerfile + docker-compose.yml
+- [x] Dockerfile + docker-compose.yml
+- [ ] enhance env configuration
 - [ ] PostgreSQL connection
 - [ ] OpenID authentication
 - [ ] User registration
